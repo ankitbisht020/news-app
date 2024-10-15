@@ -51,7 +51,7 @@ export default function News(props) {
       >
         {
           <div className={` text-center container mt-5 `}>
-            <h3 className={`text-${props.mode=='dark'?'white':'dark'}`}>Due to Api server, Category wise news currently  not availabe.</h3>
+            <h3 className={`text-${props.mode=='dark'?'white':'dark'}`}>Api service's is tempeorary interrupted , News can't by viewed category wise..</h3>
             <div className={`row `}>
               {response &&
                 article.map((value) => (
