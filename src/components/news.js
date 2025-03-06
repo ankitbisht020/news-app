@@ -40,7 +40,7 @@ export default function News(props) {
     try {
       setPage(page + 1);
       setResponse(false);
-      let url = `https://newsapi.org/v2/everything?q=keyword&apiKey=${API_KEY}&page=${page}&pageSize=${props.pageSize}`;
+      let url = `https://newsapi.org/v2/everything?q=keyword&apiKey=${process.env.REACT_APP_API_KEY}&page=${page}&pageSize=${props.pageSize}`;
       let data = await fetch(url);
       if (!data.ok) throw new Error("Network response was not ok");
       let parsedData = await data.json();
