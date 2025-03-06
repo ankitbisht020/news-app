@@ -10,12 +10,12 @@ export default function News(props) {
   const [response, setResponse] = useState(true);
   const [error, setError] = useState(false);
 
-  const API_KEY = process.env.REACT_APP_API_KEY; // Placeholder for your API key
+  // const API_KEY = process.env.REACT_APP_API_KEY; // Placeholder for your API key
 
 
   const updatenews = async () => {
     try {
-      let url = `https://newsapi.org/v2/everything?q=keyword&apiKey=${API_KEY}&page=${page}&pageSize=${props.pageSize}`;
+      let url = `https://newsapi.org/v2/everything?q=keyword&apiKey=${process.env.REACT_APP_API_KEY}&page=${page}&pageSize=${props.pageSize}`;
       setResponse(false);
       setError(false); // Reset error before making the request
 
